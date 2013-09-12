@@ -1,0 +1,13 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname |10|) (read-case-sensitive #t) (teachpacks ((lib "image.rkt" "teachpack" "2htdp"))) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ((lib "image.rkt" "teachpack" "2htdp")))))
+; sum: number number number -> number
+; GIVEN: three numbers
+; RETURNS: the sum of the two larger numbers
+; Examples: 
+; (sum 4 67 43)=> 110
+; (sum 34 21 8)=> 55
+
+(define (sum x y z) (cond [((< x y) and (< x z)) (+ y z)]
+                          [((< y x) and (< y z)) (+ x z)]
+                          [else (+ x y)]
